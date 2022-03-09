@@ -1,0 +1,35 @@
+{
+    "name": "jobin/engagespot",
+    "version": "0.0.1",
+    "description": "EngageSpot Laravel Integration",
+    "autoload": {
+        "psr-4": {
+            "Jasjbn\\Engagespot\\": "src/"
+        }
+    },
+    "license" : "MIT",
+    "keywords": [
+        "php",
+        "engagespot",
+        "laravel",
+        "sdk",
+        "jasjbn"
+    ],
+    "authors": [
+        {
+            "name": "Jobin Jose",
+            "email": "jobin.jose@logidots.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "7.4.x-dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jasjbn\\Engagespot\\EngagespotServiceProvider"
+            ]
+        }
+    }
+}
