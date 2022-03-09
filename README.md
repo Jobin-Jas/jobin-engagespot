@@ -24,7 +24,7 @@ composer require jobin/engagespot
 
 In Laravel 5.5 and above the service provider automatically.
 
-3 - Now publish the config dile for engagespot:
+3 - Now publish the config file for engagespot:
 
 ```
 php artisan vendor:publish --provider="Jasjbn\Engagespot\EngagespotServiceProviderr"
