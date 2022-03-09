@@ -35,8 +35,8 @@ php artisan vendor:publish --provider="Jasjbn\Engagespot\EngagespotServiceProvid
 1. After package installation now add  `X-ENGAGESPOT-API-KEY'` and `X-ENGAGESPOT-API-SECRET` on config\engagespot.php file or you can directly update in your `.env` file by adding like.
 
 ```
-X-ENGAGESPOT-API-SECRET = XXXXXXXXXXXXXXXXX
-X-ENGAGESPOT-API-KEY' = XXXXXXXXXXXXX
+X_ENGAGESPOT_API-SECRET = XXXXXXXXXXXXXXXXX
+X_ENGAGESPOT_API-KEY' = XXXXXXXXXXXXX
 ```````
 
 ### Send Your Notification 
