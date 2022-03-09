@@ -1,4 +1,4 @@
-<!-- # jobin-engagespot
+# jobin-engagespot
 EngageSpot Laravel Integration
 
 
@@ -9,71 +9,58 @@ This package allows you to manage your engagespot notifications easly.
 
 ### Installation
 
-
-Say what the step will be
+1 - You can install the package via composer:
+```
+composer require jobin/engagespot
+```
+2 - If you are installing on Laravel 5.4 or lower you will be needed to manually register Service Provider by adding it in config/app.php providers array.
 
 ```
-Give the example
+'providers' => [
+    //...
+    \Jasjbn\Engagespot\EngagespotServiceProvider::class,
+]
 ```
 
-And repeat
+In Laravel 5.5 and above the service provider automatically.
+
+3 - Now publish the config dile for engagespot:
 
 ```
-until finished
+php artisan vendor:publish --provider="Jasjbn\Engagespot\EngagespotServiceProviderr"
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+## Getting Started
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+1. After package installation now add  `X-ENGAGESPOT-API-KEY'` and `X-ENGAGESPOT-API-SECRET` on config\engagespot.php file or you can directly update in your `.env` file by adding like.
 
 ```
-Give an example
+X-ENGAGESPOT-API-SECRET = XXXXXXXXXXXXXXXXX
+X-ENGAGESPOT-API-KEY' = XXXXXXXXXXXXX
+```````
+
+### Send Your Notification 
+
+
+```
+use Jasjbn\Engagespot\Engagespot;
+
+$engagespot = new Engagespot();
+
+        $engagespot->title = 'Test Notification';
+        $engagespot->recipients = [
+            '+639171234567',
+            '+639171234568',
+        ];
+        $engagespot->url = 'https://www.google.com';
+        $engagespot->icon = 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png';
+        $engagespot->channels = [
+            'email',
+            'webPush',
+        ];
+
+        $engagespot->send();
 ```
 
-### And coding style tests
 
-Explain what these tests test and why
 
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-<!-- * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
- -->
-<!-- ## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc --> -->
