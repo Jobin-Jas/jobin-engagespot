@@ -4,7 +4,7 @@ EngageSpot Laravel Integration
 
 ## What It Does
 
-This package allows you to manage your engagespot notifications easly. 
+This package allows you to manage your [Engagespot](https://engagespot.co) notifications easly. 
 
 
 ### Installation
