@@ -47,19 +47,14 @@ use Jasjbn\Engagespot\Engagespot;
 
 $engagespot = new Engagespot();
 
-        $engagespot->title = 'Test Notification';
-        $engagespot->recipients = [
-            '+639171234567',
-            '+639171234568',
-        ];
-        $engagespot->url = 'https://www.google.com';
-        $engagespot->icon = 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png';
-        $engagespot->channels = [
-            'email',
-            'webPush',
-        ];
+$engagespot->title = 'Test Notification';
+$engagespot->recipients = array("user@test.com","userone@test.com")
+$engagespot->url = 'https://www.google.com'; 
+$engagespot->icon = 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png';
+$engagespot->channels = array('email','webPush');
 
-        $engagespot->send();
+$engagespot->send();
+
 ```
 
 
