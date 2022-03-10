@@ -13,7 +13,7 @@ This package allows you to manage your [Engagespot](https://engagespot.co) notif
 ```
 composer require jobin/engagespot
 ```
-2 - If you are installing on Laravel 5.4 or lower you will be needed to manually register Service Provider by adding it in config/app.php providers array.
+2 - You will need to manually register Service Provider by adding it in config/app.php providers array.
 
 ```
 'providers' => [
@@ -35,8 +35,8 @@ php artisan vendor:publish --provider="Jasjbn\Engagespot\EngagespotServiceProvid
 1. After package installation now add  `X-ENGAGESPOT-API-KEY'` and `X-ENGAGESPOT-API-SECRET` on config\engagespot.php file or you can directly update in your `.env` file by adding like.
 
 ```
-X_ENGAGESPOT_API-SECRET = XXXXXXXXXXXXXXXXX
-X_ENGAGESPOT_API-KEY' = XXXXXXXXXXXXX
+X_ENGAGESPOT_API_SECRET = XXXXXXXXXXXXXXXXX
+X_ENGAGESPOT_API_KEY' = XXXXXXXXXXXXX
 ```````
 
 ### Send Your Notification 
