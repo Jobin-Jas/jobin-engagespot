@@ -48,6 +48,7 @@ use Jasjbn\Engagespot\Engagespot;
 $engagespot = new Engagespot();
 
 $engagespot->title = 'Test Notification';
+$engagespot->message = "hey this is a test notification "
 $engagespot->recipients = array("user@test.com","userone@test.com")
 $engagespot->url = 'https://www.google.com'; 
 $engagespot->icon = 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png';
