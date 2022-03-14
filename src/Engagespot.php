@@ -1,7 +1,7 @@
 <?php
 namespace  Jasjbn\Engagespot;
 use Illuminate\Support\Facades\Http;
-
+use Illuminate\Support\Facades\Log;
 
 class Engagespot{
 
@@ -9,18 +9,14 @@ class Engagespot{
     {
         $notifcationSpec = ['notification' => [
                     "title" => $this->title,
-                    "message" => $this->message,
-                    "url" => $this->url,
-                    "icon" => $this->icon,
+                    "message" => $this->message ?? null,
+                    "url" => $this->url ?? null,
+                    "icon" => $this->icon ?? null,
                 ],
-                "recipients" => [
-                    $this->recipients
-                ],
-            "category" => $this->category,
+                "recipients" => $this->recipients,
+                "category" => $this->category ?? null,
                 "override" => [
-                    "channels" => [
-                        $this->channels
-                    ]
+                    "channels" => $this->channels ?? null,
                 ]
             ];
         try{
@@ -31,8 +27,9 @@ class Engagespot{
 
             return response()->json([
                 'code' => $response->getStatusCode(),
-                'message' => $response->getReasonPhrase(),
-            ]);    
+                'message' => $response->body(),
+            ]); 
+
         }catch(\Exception $e){
             return $e->getMessage();
         }
