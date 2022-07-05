@@ -53,6 +53,7 @@ $engagespot->recipients = array("user@test.com","userone@test.com")
 $engagespot->url = 'https://www.google.com'; 
 $engagespot->icon = 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png';
 $engagespot->channels = array('email','webPush');
+$engagespot->SendGridObject = object(//send grid object)
 
 $engagespot->send();
 
